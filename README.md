@@ -37,6 +37,7 @@ Available options are:
 CSSC.red
 # Returns: '#FF4136'
 ```
+![Colors](https://raw.githubusercontent.com/PEM--/cssc/master/assets/colors.png)
 * `famous`: When `true`, it imports as CSSC file, all required CSS styles for [Famo.us](http://famo.us). It removes unnecessary calls to CSS files and the
 necessity to put the following in your project:
 ```javascript
