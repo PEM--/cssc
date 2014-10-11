@@ -22,6 +22,22 @@ mainCss.add '.bubble',
 CSS properties are declared as a dictionary of keys and values respecting
 the DOM and CCOM API when called in Javascript.
 
+### Configuration
+You can configure this package using a `cssc.json` file in your project.
+```json
+{
+  colors: true,
+  famous: true
+}
+```
+
+Available options are:
+* `colors`: Importing [colors](http://clrs.cc):
+  ```coffee
+  CSSC.red
+  # Returns: '#FF4136'
+  ```
+
 ### Helper functions
 * String interpolations<br>
   They allow working with numerical value instead of strings.
