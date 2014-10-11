@@ -1,5 +1,5 @@
 ## Description
-This [Meteor](https://www.meteor.com/) provides an easy way to create your stylesheets in [CoffeeScript](http://coffeescript.org/).
+This [Meteor](https://www.meteor.com/) package provides an easy way to create your stylesheets in [CoffeeScript](http://coffeescript.org/).
 
 ## Installation
 ```bash
