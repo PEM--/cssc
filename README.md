@@ -23,7 +23,7 @@ CSS properties are declared as a dictionary of keys and values respecting
 the DOM and CCOM API when called in Javascript.
 
 ### Configuration
-You can configure this package using a `cssc.json` file in your project.
+You can configure this package using a `cssc.json` file in root of your project.
 ```json
 {
   colors: true,
@@ -32,10 +32,15 @@ You can configure this package using a `cssc.json` file in your project.
 ```
 
 Available options are:
-* `colors`: Importing [colors](http://clrs.cc):
+* `colors`: When `true`, it imports [colors](http://clrs.cc):
 ```coffee
 CSSC.red
 # Returns: '#FF4136'
+```
+* `famous`: When `true`, it imports as CSSC file, all required CSS styles for [Famo.us](http://famo.us). It removes unnecessary calls to CSS files and the
+necessity to put the following in your project:
+```javascript
+require('famous.core.famous');
 ```
 
 ### Helper functions
