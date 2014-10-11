@@ -25,12 +25,12 @@ the DOM and CCOM API when called in Javascript.
 ### Helper functions
 * String interpolations<br>
   They allow working with numerical value instead of strings.
-  * Pixels `CSSC.x {Number}`<br>
+  * Pixels `CSSC.x {Number}`:<br>
     ```coffee
     CSSC.x 12
     # Returns: '12px'
     ```
-  * Percentages `CSSC.p {Number}`<br>
+  * Percentages `CSSC.p {Number}`:<br>
     ```coffee
     CSSC.p 50
     # Returns: '50%'
