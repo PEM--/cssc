@@ -3,7 +3,7 @@ var path = Npm.require('path');
 
 Package.describe({
   summary: 'Stylesheets in CoffeeScript',
-  version: '0.3.0',
+  version: '0.4.0',
   name: 'pierreeric:cssc',
   git: 'https://github.com/PEM--/cssc.git'
 });
@@ -18,16 +18,15 @@ Package.onUse(function(api) {
   ];
 
   // Check if client has set a `cssc.json` file for configuring this package.
-  console.log('Current', process.cwd());
   var config = {};
   try {
     var configString = fs.readFileSync(path.join(process.cwd(), 'cssc.json'));
     eval('config = ' + configString);
     if(config.colors) {
-      files.push('colors.coffee');
+      files.push('cssc-colors.coffee');
     }
     if(config.famous) {
-      files.push('famous.coffee');
+      files.push('cssc-famous.coffee');
     }
   } catch(e) {
     console.log('No configuration found. Basic usage');
