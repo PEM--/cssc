@@ -56,5 +56,11 @@ CSSC.p 50
 # Returns: '50%'
 ```
 
+## Troubleshooting
+### Configuration is not taken into account
+Simply relaunch `meteor`.
+> If you know how to watch during the build process and relaunch a task
+  PR or issus explaining how to do it are welcome.
+
 ## Dependencies
 * [Meteor's coffeescript](https://atmospherejs.com/meteor/coffeescript)
