@@ -59,8 +59,8 @@ CSSC.p 50
 ## Troubleshooting
 ### Configuration is not taken into account
 Simply relaunch `meteor`.
-> If you know how to watch during the build process and relaunch a task
-  PR or issus explaining how to do it are welcome.
+> If you know how to watch a file during the build process and relaunch a task
+  PR or issues explaining how to do it are welcome.
 
 ## Dependencies
 * [Meteor's coffeescript](https://atmospherejs.com/meteor/coffeescript)
