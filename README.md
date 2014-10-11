@@ -26,15 +26,15 @@ the DOM and CCOM API when called in Javascript.
 * String interpolations<br>
   They allow working with numerical value instead of strings.
   * Pixels `CSSC.x {Number}`
-      ```coffee
-      CSSC.x 12
-      # Returns: '12px'
-      ```
+```coffee
+CSSC.x 12
+# Returns: '12px'
+```
   * Percentages `CSSC.p {Number}`
-      ```coffee
-      CSSC.p 50
-      # Returns: '50%'
-      ```
+```coffee
+CSSC.p 50
+# Returns: '50%'
+```
 
 ## Dependencies
 * [Meteor's coffeescript](https://atmospherejs.com/meteor/coffeescript)
