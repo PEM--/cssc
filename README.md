@@ -33,24 +33,23 @@ You can configure this package using a `cssc.json` file in your project.
 
 Available options are:
 * `colors`: Importing [colors](http://clrs.cc):
-  ```coffeescript
-  CSSC.red
-  # Returns: '#FF4136'
-  ```
+```coffee
+CSSC.red
+# Returns: '#FF4136'
+```
 
 ### Helper functions
-* String interpolations<br>
-  They allow working with numerical value instead of strings.
-  * Pixels `CSSC.x {Number}`:<br>
-    ```coffeescript
-    CSSC.x 12
-    # Returns: '12px'
-    ```
-  * Percentages `CSSC.p {Number}`:<br>
-    ```coffeescript
-    CSSC.p 50
-    # Returns: '50%'
-    ```
+They allow working with numerical value instead of strings.
+* Pixels `CSSC.x {Number}`:<br>
+```coffee
+CSSC.x 12
+# Returns: '12px'
+```
+* Percentages `CSSC.p {Number}`:<br>
+```coffee
+CSSC.p 50
+# Returns: '50%'
+```
 
 ## Dependencies
 * [Meteor's coffeescript](https://atmospherejs.com/meteor/coffeescript)
