@@ -11,7 +11,7 @@ meteor add pierreeric:cssc
 The following example creates a new stylesheet with a single rule on a CSS
 class `.bubble`:
 
-```coffee
+```coffeescript
 mainCss = new CSSC
 
 mainCss.add '.bubble',
@@ -33,7 +33,7 @@ You can configure this package using a `cssc.json` file in your project.
 
 Available options are:
 * `colors`: Importing [colors](http://clrs.cc):
-  ```coffee
+  ```coffeescript
   CSSC.red
   # Returns: '#FF4136'
   ```
@@ -42,12 +42,12 @@ Available options are:
 * String interpolations<br>
   They allow working with numerical value instead of strings.
   * Pixels `CSSC.x {Number}`:<br>
-    ```coffee
+    ```coffeescript
     CSSC.x 12
     # Returns: '12px'
     ```
   * Percentages `CSSC.p {Number}`:<br>
-    ```coffee
+    ```coffeescript
     CSSC.p 50
     # Returns: '50%'
     ```
