@@ -1,7 +1,7 @@
 Package.describe({
   summary: "Stylesheets in CoffeeScript",
-  version: "1.0.0",
-  git: " \* Fill me in! *\ "
+  version: "0.1.0",
+  git: "https://github.com/PEM--/cssc.git"
 });
 
 Package.onUse(function(api) {
@@ -12,5 +12,5 @@ Package.onUse(function(api) {
 Package.onTest(function(api) {
   api.use('tinytest');
   api.use('pierreeric:cssc');
-  api.addFiles('pierreeric:cssc-tests.js');
+  api.addFiles('pierreeric:cssc-tests.coffee', 'client');
 });

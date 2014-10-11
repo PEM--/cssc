@@ -6,7 +6,8 @@ This [Meteor](https://www.meteor.com/) provides an easy way to create your style
 meteor add pierreeric:cssc
 ```
 
-## Basic usage
+## Usages and API
+### Basic usage
 The following example creates a new stylesheet with a single rule on a CSS
 class `.bubble`:
 
@@ -17,3 +18,23 @@ mainCss.add '.bubble',
   backgroundColor: '#FFDC00'
   borderRadius: CSSC.x 8
 ```
+
+CSS properties are declared as a dictionary of keys and values respecting
+the DOM and CCOM API when called in Javascript.
+
+### Helper functions
+* String interpolations<br>
+  They allow working with numerical value instead of strings.
+  * Pixels `CSSC.x {Number}`
+    ```coffee
+    CSSC.x 12
+    # Returns: '12px'
+    ```
+  * Percentage `CSSC.p {Number}`
+    ```coffee
+    CSSC.p 50
+    # Returns: '50%'
+    ```
+
+## Dependencies
+* [Meteor's coffeescript](https://atmospherejs.com/meteor/coffeescript)
