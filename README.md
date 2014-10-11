@@ -1,5 +1,5 @@
 ## Description
-This [Meteor](https://www.meteor.com/) package provides an easy way to create your stylesheets in [CoffeeScript](http://coffeescript.org/).
+This [Meteor](https://www.meteor.com/) package provides an easy way to create your stylesheets in [CoffeeScript](http://coffeescript.org/): [CSSC](https://atmospherejs.com/pierreeric/cssc)
 
 ## Installation
 ```bash
@@ -65,3 +65,18 @@ Simply relaunch `meteor`.
 
 ## Dependencies
 * [Meteor's coffeescript](https://atmospherejs.com/meteor/coffeescript)
+
+## Acknowledgments
+* The [Meteor team](https://www.meteor.com/), this could not be achieved
+  without them.
+* The [Famo.us's team](http://famo.us/) for their incredible framework.
+* Maxime Quandalle, for his help demystifying Meteor's package, his PR on Meteor
+  and his package [Jade's package](https://atmospherejs.com/mquandalle/jade).
+* Morten N.O. Nørgaard Henriksen, for his PR on Famo.us and on Meteor,
+  his [Famono package](https://atmospherejs.com/raix/famono) which helps
+  importing Famo.us but also act as a bower and git importer.
+* Gadi Cohen, for his codes and his
+  [Famous's view package](https://atmospherejs.com/gadicohen/famous-views)
+  from which I've learned a lot.
+* Adam Morse, for his incredible
+  [set of colors](https://github.com/mrmrs/colors). It eases the eyes :wink:.
