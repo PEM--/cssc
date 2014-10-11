@@ -17,11 +17,11 @@ Package.onUse(function(api) {
     'cssc.coffee'
   ];
 
-  // Check if client has set a `cssc.json` file
-  //  for configuring this package.
+  // Check if client has set a `cssc.json` file for configuring this package.
+  console.log('Current', process.cwd());
   var config = {};
   try {
-    var configString = fs.readFileSync('cssc.json');
+    var configString = fs.readFileSync(path.join(process.cwd(), 'cssc.json'));
     eval('config = ' + configString);
     if(config.colors) {
       files.push('colors.coffee');
@@ -40,29 +40,3 @@ Package.onTest(function(api) {
   api.use('pierreeric:cssc');
   api.addFiles('cssc-tests.js');
 });
-
-// Functions to help retrives the current Meteor's path.
-// These functions are copied from Gadi's incredible package: famous-view
-// https://github.com/gadicc/meteor-famous-views/blob/master/package.js
-function isAppDir(filepath) {
-  try {
-    return fs.statSync(path.join(filepath, '.meteor', 'packages')).isFile();
-  } catch (e) {
-    return false;
-  }
-}
-
-function meteorRoot() {
-  var currentDir = process.cwd();
-  while (currentDir) {
-    var newDir = path.dirname(currentDir);
-    if (isAppDir(currentDir)) {
-      break;
-    } else if (newDir === currentDir) {
-      return null;
-    } else {
-      currentDir = newDir;
-    }
-  }
-  return currentDir;
-}
