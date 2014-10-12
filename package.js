@@ -18,6 +18,7 @@ Package.onUse(function(api) {
   ];
 
   // Check if client has set a `cssc.json` file for configuring this package.
+  console.log('Current', process.cwd());
   var config = {};
   try {
     var configString = fs.readFileSync(path.join(process.cwd(), 'cssc.json'));
