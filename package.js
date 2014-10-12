@@ -3,7 +3,7 @@ var path = Npm.require('path');
 
 Package.describe({
   summary: 'Stylesheets in CoffeeScript',
-  version: '0.4.0',
+  version: '0.4.1',
   name: 'pierreeric:cssc',
   git: 'https://github.com/PEM--/cssc.git'
 });
