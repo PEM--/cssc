@@ -1,6 +1,6 @@
 Package.describe({
   summary: 'Stylesheets in CoffeeScript',
-  version: '1.0.0',
+  version: '1.0.1',
   name: 'pierreeric:cssc',
   git: 'https://github.com/PEM--/cssc.git'
 });
