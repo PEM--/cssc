@@ -6,7 +6,7 @@ Package.describe({
 });
 
 Package.onUse(function(api) {
-  api.use('coffeescript');
+  api.use('coffeescript@1.0.0');
   api.addFiles('cssc.coffee', 'client');
 });
 
