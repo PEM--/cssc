@@ -49,18 +49,20 @@ CSSC.em 1.2
 You can add additional plugins to this package enhancing its capabilities.
 
 Available options are:
-* `meteor add pierreeric:cssc-colors`: It imports [colors](http://clrs.cc):
+* **Colors**: `meteor add pierreeric:cssc-colors`: It imports [colors](http://clrs.cc):
 ```coffee
 CSSC.red
 # Returns: '#FF4136'
 ```
 ![Colors](https://raw.githubusercontent.com/PEM--/cssc/master/assets/colors.png)
 
-* `meteor add pierreeric:cssc-famous`: It imports as CSSC file, all required CSS styles for [Famo.us](http://famo.us). It removes unnecessary calls to CSS files and the
+* **Famo.us**: `meteor add pierreeric:cssc-famous`: It imports as CSSC file, all required CSS styles for [Famo.us](http://famo.us). It removes unnecessary calls to CSS files and the
 necessity to put the following in your project:
 ```javascript
 require('famous.core.famous');
 ```
+
+* **Normalize**: `meteor add pierreeric:cssc-normalize`: It imports as CSSC file all normalized styles just like [normalize.css](http://necolas.github.io/normalize.css/).
 
 ## Dependencies
 * [Meteor's coffeescript](https://atmospherejs.com/meteor/coffeescript)

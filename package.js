@@ -1,12 +1,12 @@
 Package.describe({
   summary: 'Stylesheets in CoffeeScript',
-  version: '0.5.0',
+  version: '1.0.0',
   name: 'pierreeric:cssc',
   git: 'https://github.com/PEM--/cssc.git'
 });
 
 Package.onUse(function(api) {
-  api.versionsFrom('METEOR@0.9.3.1');
+  api.versionsFrom('METEOR@1.0.0');
   api.use('coffeescript');
   api.addFiles('cssc.coffee', 'client');
 });
