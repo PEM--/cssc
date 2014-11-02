@@ -12,14 +12,21 @@ class @CSSC
   @param  {Number} val Value set in the string.
   @return {String}     Stringified value with percentage.
   ###
-  @p: (val) -> "#{val}%"
+  @pc: (val) -> "#{val}%"
 
   ###
   Static method for creating pixel strings.
   @param  {Number} val Value set in the string.
   @return {string}     Stringified value with pixel.
   ###
-  @x: (val) -> "#{val}px"
+  @px: (val) -> "#{val}px"
+
+  ###
+  Static method for creating em strings.
+  @param  {Number} val Value set in the string.
+  @return {string}     Stringified value with em.
+  ###
+  @em: (val) -> "#{val}em"
 
   ###
   C-tor creating a StyleSheet.
@@ -36,11 +43,15 @@ class @CSSC
 
   ###
   Add a CSSRule to the current StyleSheet.
-  @param {String} tag        A tag or a class.
+  @param {String} or {Array} tags A single tag / class or and Array of srings.
   @param {Object} properties A dictionnay of CSS's properties.
+  @return {CSSC} The GhostTag's StyleSheet, allowing chaining.
   ###
-  add: (tag, properties) ->
-    @sheet.insertRule "#{tag} {}", @rulesIdx
-    rule = @sheet.cssRules[@rulesIdx]
-    rule.style[key] = val for key, val of properties
-    @rulesIdx++
+  add: (tags, properties) ->
+    tags = [tags] if typeof tags is 'string'
+    for tag in tags
+      @sheet.insertRule "#{tag} {}", @rulesIdx
+      rule = @sheet.cssRules[@rulesIdx]
+      rule.style[key] = val for key, val of properties
+      @rulesIdx++
+    @
