@@ -39,7 +39,7 @@ CSSC.px 12
 CSSC.pc 50
 # Returns: '50%'
 ```
-* EM `CSSC.pc {Number}`:<br>
+* EM `CSSC.em {Number}`:<br>
 ```coffee
 CSSC.em 1.2
 # Returns: '1.2em'
