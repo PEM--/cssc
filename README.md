@@ -1,6 +1,10 @@
 ## Description
 This [Meteor](https://www.meteor.com/) package provides an easy way to create your stylesheets in [CoffeeScript](http://coffeescript.org/): [CSSC](https://atmospherejs.com/pierreeric/cssc)
 
+Find some additional information on my blog:
+* [Create your CSS styles in CoffeeScript](http://pem-musing.blogspot.com/2014/10/create-your-css-styles-in-coffeescript.html)
+* [CSS color manipulation and normalize in CoffeeScript](http://pem-musing.blogspot.fr/2014/11/css-color-manipulation-and-normalize-in.html)
+
 ## Installation
 ```bash
 meteor add pierreeric:cssc
@@ -49,12 +53,21 @@ CSSC.em 1.2
 You can add additional plugins to this package enhancing its capabilities.
 
 Available options are:
-* **Colors**: `meteor add pierreeric:cssc-colors`: It imports [colors](http://clrs.cc):
+* **Colors**: `meteor add pierreeric:cssc-colors`: It imports [colors](http://clrs.cc)
+and provides some nice API for color manipulations:
 ```coffee
 CSSC.red
 # Returns: '#FF4136'
 ```
 ![Colors](https://raw.githubusercontent.com/PEM--/cssc/master/assets/colors.png)
+```coffee
+# Create a color from an hex String and add alpha blending
+c = new CSSC.Clr '#FF4136', 0.3
+# Add 20% luminance
+c.set 'l', (Math.round 1.2 * g.get 'l')
+# Get an RGBA string
+c.rgba()
+```
 
 * **Famo.us**: `meteor add pierreeric:cssc-famous`: It imports as CSSC file, all required CSS styles for [Famo.us](http://famo.us). It removes unnecessary calls to CSS files and the
 necessity to put the following in your project:
