@@ -62,7 +62,7 @@ CSSC.red
 ![Colors](https://raw.githubusercontent.com/PEM--/cssc/master/assets/colors.png)
 ```coffee
 # Create a color from an hex String and add alpha blending
-c = new CSSC.Clr '#FF4136', 0.3
+c = new CSSC.Clr ['#FF4136', 0.3]
 # Add 20% luminance
 c.set 'l', (Math.round 1.2 * g.get 'l')
 # Get an RGBA string
