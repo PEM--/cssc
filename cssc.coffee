@@ -39,7 +39,6 @@ class @CSSC
     style.appendChild document.createTextNode ''
     document.head.appendChild style
     @sheet = style.sheet
-    @rulesIdx = 0
 
   ###
   Add a CSSRule to the current StyleSheet.
@@ -50,8 +49,7 @@ class @CSSC
   add: (tags, properties) ->
     tags = [tags] if typeof tags is 'string'
     for tag in tags
-      @sheet.insertRule "#{tag} {}", @rulesIdx
-      rule = @sheet.cssRules[@rulesIdx]
+      idx = @sheet.insertRule "#{tag} {}", @sheet.cssRules.length
+      rule = @sheet.cssRules[idx]
       rule.style[key] = val for key, val of properties
-      @rulesIdx++
     @
